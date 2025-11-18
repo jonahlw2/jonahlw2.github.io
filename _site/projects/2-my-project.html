@@ -24,11 +24,11 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Vega/Altair Plots">
-  <meta property="og:description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <meta property="og:description" content="This is a visualization about disciplinary actions on different licenses!">
   <meta property="og:image" content="assets/pngs/homework.png">
 
   <title>Vega/Altair Plots</title>
-  <meta name="description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <meta name="description" content="This is a visualization about disciplinary actions on different licenses!">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -54,7 +54,7 @@
   <main class="flex-shrink-0 container mt-5">
     <nav class="navbar navbar-expand-lg navbar-themed">
 
-  <a class="navbar-brand" href="/"><h5><b>Jonah Witte</b></h5></a>
+  <a class="navbar-brand" href="/"><h5><b>IS445 Jekyll Template</b></h5></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
@@ -81,6 +81,23 @@
 
 <vegachart schema-url="/assets/json/altair_licenses.json" style="width: 100%"></vegachart>
 
+<h1 id="analysis-of-visualizations">Analysis of Visualizations</h1>
+
+<p>I created 2 visualizations that can be used to provide insight on the amount and reasons for disciniplary actions among many different licenses that are included in the dataset.</p>
+
+<p>Viz 1:
+The first visualization (Disciplinary Amounts) sorts the data by each type of license. This can include dental, detective board, cosmotology as well as many others. The bars represent the amount of disciplinary actions that have been taken against each of these license types. As you can see from the graph, the detective board has the most by a lot. In order to create this visualization I first had to create a subset of the dataset and group by license type. From there I reorganized the disciplined column to numbers in order for it to able to be counted and displayed all the results. 
+The interactivty of this plot comes with the combination of the second visualization. The amount of disciplinary actions doesn’t mean a whole lot without some context. That is why I decided to add another plot that was linked to the first one. In order to view the second plot you can click on any of the bars in the first plot to see the reasons why each license type got disciplinary actions which brings me into the description for the next plot.</p>
+
+<p>Viz 2:
+The second visualization (Reasons) is another bar graph that represents different categories of disciplinary actions. I split the categories into 6 major groups: Taxes, Criminal/Conviction, Qualifications, Billing, Unprofessional and other. The reason that I chose these categories was through a detailed look into the descriptions for the disciplinary actions. The dataset provided these reasons and after looking through them I found key words that fit into these 6 major categories. I then made a subset of the data with only these instances and grouped the data by these groups. After counting the amount in each group this visualization provides much more detail into the different types of actions taken against each license type.
+The interactivity for this graph is directly correlated with the first graph, changing based on which license type the user selects.\</p>
+
+<p>Choices:
+I chose to make these graphs a bar chart because I feel like it is a simple visualization that is easy to understand with just a glance. The data isn’t meant to be studied very deeply as the visualizations don’t provide specific details just an overview of the trends about the disciplinary actions taken against different licensing types.</p>
+
+<p>Below are the links to the data itself and the analysis I preformed on the data.</p>
+
 <!-- these are written in a combo of html and liquid -->
 
 <div class="left">
@@ -90,7 +107,7 @@
 </div>
 
 <div class="right">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/homework5.ipynb">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jonahlw2/jonahlw2.github.io/blob/main/python_notebooks/homework5.ipynb">
   The Analysis
 </a>
 
