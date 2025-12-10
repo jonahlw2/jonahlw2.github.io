@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+  Updates for JPN Fall 2024
+  FALL2024ID2351
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Power Plant Visualization Plots">
+  <meta property="og:description" content="This is a visualization about power plants around the world, their fuel, capacity and location.">
+  <meta property="og:image" content="assets/pngs/per-capita-energy-use.png">
+
+  <title>Power Plant Visualization Plots</title>
+  <meta name="description" content="This is a visualization about power plants around the world, their fuel, capacity and location.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>IS445 Jekyll Template</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="power-plants---a-fuel-type--location-analysis">Power Plants - A Fuel type &amp; Location Analysis!</h1>
+<h4 id="created-by-jonah-witte">Created by Jonah Witte</h4>
+
+<vegachart schema-url="/assets/json/power_plants.json" style="width: 100%"></vegachart>
+
+<h3 id="analysis-of-main-visualization">Analysis of Main Visualization</h3>
+
+<p>This chart is broken down into 3 main components, the bar chart (pictured left), the map chart (pictured right) and the dropdown menu (pictured below).</p>
+
+<p>Starting with the bar chart, this graph is a representation of all the different power plants within a single country. It seperates the plants by primary fuel type (hyrdo, gas, coal etc) and then calculates the capacity in megawatts for each fuel type. Essentially what capacity means is the max amount of power that the plants can produce/provide at once. “Running at max capacity” means the power plant/plants would produce the pictured amount of megawhatts.</p>
+
+<p>The second chart is of a map. This chart shows the location of each power plant organzied by country. This gives an idea of how many plants are within a country and where they are located. Hovering over a marker of a plant on the map will show the country name, primary_fuel and capacity for that plant. This chart works in combination with the bar chart as when a specific fuel type is selected then the map will highlight which plants on the map use that primary fuel type.</p>
+
+<p><em><strong>The selected fuel type and the map locations will turn red!</strong></em></p>
+
+<p>The last part of the chart is the country dropdown menu. This is a basic dropdown that allows a country to be selected and will update both the bar chart and the map to accurately reflect the selected country’s power plant locations and seperations by fuel.</p>
+
+<h3 id="contextual-visulizations">Contextual Visulizations</h3>
+
+<h4 id="kwh-graph">KW/H Graph</h4>
+
+<p><img src="/assets/pngs/per-capita-energy-use.png" alt="Countires Kw/h" /></p>
+
+<p><span style="font-size: 10px;">“Data Page: Primary energy consumption per capita”, part of the following publication: Hannah Ritchie, Pablo Rosado, and Max Roser (2023) - “Energy”. Data adapted from U.S. Energy Information Administration, Energy Institute, Various sources. Retrieved from <a href="https://archive.ourworldindata.org/20250925-233948/grapher/per-capita-energy-use.html">OurWorldInData</a> [online resource] (archived on September 25, 2025).</span></p>
+
+<p>The map pictured above is one from Our World In Data and shows a map of the world highlighted on a color scale based on the number of kilowatts per hour that the average person uses in the country. This is extremely relevant to the main visualization as it shows how much energy is used vs how much it is possible to produce.</p>
+
+<p><em><strong>Keep in mind that a Megawatt is 1000x a kilowatt!</strong></em></p>
+
+<h4 id="carbon-emissions-graph">Carbon Emissions Graph</h4>
+
+<p><img src="/assets/pngs/annual-co2-emissions-per-country.png" alt="Carbon Emmisions" /></p>
+
+<p><span style="font-size: 10px;">“Data Page: Primary energy consumption per capita”, part of the following publication: Hannah Ritchie, Pablo Rosado, and Max Roser (2023) - “Energy”. Data adapted from U.S. Energy Information Administration, Energy Institute, Various sources. Retrieved from <a href="https://archive.ourworldindata.org/20250925-233948/grapher/per-capita-energy-use.html">OurWorldInData</a> [online resource] (archived on September 25, 2025).</span></p>
+
+<p>This next chart shows a time series relating to how much carbon emission is in the atmosphere for the entire world. This chart is also from Our World In Data and is relevant in this instance because of the different types of plants around the world. As seen from my orginal graph, power plants that use primary carbon based fuel like coal and gas have a much higher max capacity than other more eco friendly options like solar or hydro. While this is beneficial as it increases the amount of energy that can be used, the above graph shows how much carbon emissions are being produced which ultimately destry our atmosphere and needs to be remedied as soon as possible.</p>
+
+<h3 id="artistic-choices">Artistic Choices:</h3>
+<p>I chose to make a bar and map chart combination since it is very user friendly and information can be extracted without too much direction. I chose to make the selected color red because it stands out very nicely on a gray background and can easily be seen. I chose dark green for the non selected color because I wanted a color that looks dull and not draw very much attention while also being able to show up on a gray neutral background.</p>
+
+<p>Below are the links to the data itself and the analysis I preformed on the data.</p>
+
+<!-- these are written in a combo of html and liquid -->
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jonahlw2/jonahlw2.github.io/blob/main/python_notebooks/final_project.ipynb">
+  The Analysis
+</a>
+
+</div>
+
+<div>
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://datasets.wri.org/datasets/global-power-plant-database?map=eyJhY3RpdmVMYXllckdyb3VwcyI6W3siZGF0YXNldElkIjoiNTM2MjNkZmQtM2RmNi00ZjE1LWEwOTEtNjc0NTdjZGI1NzFmIiwibGF5ZXJzIjpbIjJhNjk0Mjg5LWZlYzktNGJmZS1hNmQyLTU2YzM4NjRlYzM0OSJdfV0sImJhc2VtYXAiOiJsaWdodCIsImJvdW5kYXJpZXMiOmZhbHNlLCJib3VuZHMiOnsiYmJveCI6bnVsbCwib3B0aW9ucyI6e319LCJsYWJlbHMiOiJkYXJrIiwibGF5ZXJzUGFyc2VkIjpbWyIyYTY5NDI4OS1mZWM5LTRiZmUtYTZkMi01NmMzODY0ZWMzNDkiLHsiYWN0aXZlIjp0cnVlLCJsYXllclNvdXJjZSI6bnVsbCwib3BhY2l0eSI6MSwidmlzaWJpbGl0eSI6dHJ1ZSwiekluZGV4IjoxMX1dXSwidmlld1N0YXRlIjp7ImxhdGl0dWRlIjo0NC40MTk2NzM0MTY1MjU5MSwibG9uZ2l0dWRlIjoxMi44MTQ0MDgxMTY3NjEzNDIsInpvb20iOjIuNjQzODY1OTY0NTE4OTI5NX19">
+  Power Plant Location Data
+</a>
+</div>
+
+<div>
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://ourworldindata.org/grapher/per-capita-energy-use#reuse-this-work">
+  KW/h Usage Data
+</a>
+</div>
+
+<div>
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://ourworldindata.org/grapher/per-capita-energy-use#reuse-this-work">
+  Carbon Emissions Data
+</a>
+</div>
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>A. P. Corgi</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jnaiman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/your_channel_name"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+
+</div>
+
+  Theme by <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a> and <a href="https://github.com/4dcu-be/4dcu.be">4dcu.be</a>.
+
+  
+<!--<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+-->
+
+</footer>
+
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
+
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+<!--
+end of checks! JPN
+-->
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
