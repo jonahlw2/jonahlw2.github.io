@@ -70,11 +70,11 @@ Below are the links to the data itself and the analysis I preformed on the data.
 
 
 <div>
-{% include elements/button.html link="https://ourworldindata.org/grapher/per-capita-energy-use#reuse-this-work" text="KW/h Usage Data" %}
+{% include elements/button.html link="https://ourworldindata.org/grapher/per-capita-energy-use" text="KW/h Usage Data" %}
 </div>
 
 <div>
-{% include elements/button.html link="https://ourworldindata.org/grapher/per-capita-energy-use#reuse-this-work" text="https://ourworldindata.org/co2-emissions" text="Carbon Emissions Data" %}
+{% include elements/button.html link="https://ourworldindata.org/co2-emissions" text="Carbon Emissions Data" %}
 </div>
 
 
